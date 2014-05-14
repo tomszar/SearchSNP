@@ -5,6 +5,10 @@ Created on 31/08/2012
 '''
 import os
 
+crom = input("Ingrese el cromosoma que quiere evaluar (como número, del 1 al 22, o X o Y) :")
+poblacion_1 = input("Ingrese el nombre de la poblacion 1 a evaluar.\n(ASW, CEU, CHB, CHD, GIH, JPT, LWK, MEX, MKK, TSI, YRI): ")
+
+
 print("Programa para evaluar diferencias alelicas entre 2 poblaciones \n")
 #ingresar primer archivo y su separador
 nombre = input("Ingrese nombre del primer archivo: ")
