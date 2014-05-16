@@ -4,9 +4,17 @@ Created on 31/08/2012
 @author: Tomas B. Gonzalez Z.
 '''
 import os
+from ftplib import FTP
 
+##Obtencion de datos para descargar los archivos necesarios##
 crom = input("Ingrese el cromosoma que quiere evaluar (como número, del 1 al 22, o X o Y) :")
 poblacion_1 = input("Ingrese el nombre de la poblacion 1 a evaluar.\n(ASW, CEU, CHB, CHD, GIH, JPT, LWK, MEX, MKK, TSI, YRI): ")
+poblacion_2 = input("Ingrese el nombre de la poblacion 2 a evaluar.\n(ASW, CEU, CHB, CHD, GIH, JPT, LWK, MEX, MKK, TSI, YRI): ")
+
+##Conectarse a base de datos de hapmap via ftp##
+hapmap = FTP("ftp.ncbi.nlm.nih.gov")
+hapmap.login()
+hapmap.cwd("/hapmap/frequencies/2010-08_phaseII+III/")
 
 
 print("Programa para evaluar diferencias alelicas entre 2 poblaciones \n")
